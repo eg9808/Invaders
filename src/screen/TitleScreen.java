@@ -70,18 +70,26 @@ public class TitleScreen extends Screen {
 			}
 			if (inputManager.isSpaceKeyDown())
 				this.isRunning = false;
-		}
-	}
+		    }
+        }
 
-	/**
+    /**
 	 * Shifts the focus to the next menu item.
 	 * @param selectedMenuItem
 	 * 			The currently selected menu item
 	 * @return The next menu item
 	 */
 	private ScreenType getNextMenuItem(ScreenType selectedMenuItem) {
-		return ScreenType.GameScreen;
-		
+		if (selectedMenuItem == ScreenType.GameScreen) {
+			return ScreenType.HighScoreScreen;
+		}
+		else if (selectedMenuItem == ScreenType.HighScoreScreen) {
+			return ScreenType.EndGame;
+		}
+		else {
+			return ScreenType.GameScreen;
+		}
+
 	}
 
 	/**
@@ -91,19 +99,20 @@ public class TitleScreen extends Screen {
 	 * @return The previous menu item
 	 */
 	private ScreenType getPreviousMenuItem(ScreenType selectedMenuItem) {
-		return ScreenType.GameScreen;
-		
-	}
+		if(selectedMenuItem == ScreenType.GameScreen)
+			return ScreenType.HighScoreScreen;
+		else if(selectedMenuItem == ScreenType.HighScoreScreen)
+            return ScreenType.EndGame;
+        else
+            return ScreenType.GameScreen;
+        
+    }
+    private void draw () {
+        drawManager.initDrawing(this);
 
-	/**
-	 * Draws the elements associated with the screen.
-	 */
-	private void draw() {
-		drawManager.initDrawing(this);
+        drawManager.drawTitle(this);
+        drawManager.drawMenu(this, this.nextScreenTpe);
 
-		drawManager.drawTitle(this);
-		drawManager.drawMenu(this, this.nextScreenTpe);
-
-		drawManager.completeDrawing(this);
-	}
+        drawManager.completeDrawing(this);
+    }
 }
