@@ -98,7 +98,7 @@ public class TitleScreen extends Screen {
 	 * @return The previous menu item
 	 */
 	private ScreenType getPreviousMenuItem(ScreenType selectedMenuItem) {
-		
+
 
 	/**
 	 * Draws the elements associated with the screen.
