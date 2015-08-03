@@ -98,7 +98,16 @@ public class TitleScreen extends Screen {
 	 * @return The previous menu item
 	 */
 	private ScreenType getPreviousMenuItem(ScreenType selectedMenuItem) {
-
+		if (selectedMenuItem == ScreenType.GameScreen) {
+			return ScreenType.EndGame;
+		}
+		else if (selectedMenuItem == ScreenType.EndGame) {
+			return ScreenType.HighScoreScreen;
+		}
+		else {
+			return ScreenType.GameScreen;
+		}
+	}
 
 	/**
 	 * Draws the elements associated with the screen.
