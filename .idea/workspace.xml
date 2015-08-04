@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="28bba1cc-afe0-4735-aa51-a4acc30c3b56" name="Default" comment="Issue 3 complete">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/engine/Invaders.java" afterPath="$PROJECT_DIR$/src/engine/Invaders.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+    <list default="true" id="28bba1cc-afe0-4735-aa51-a4acc30c3b56" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Invaders.iws" />
@@ -484,7 +482,13 @@
       <option name="project" value="LOCAL" />
       <updated>1438625778230</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Issue 3 complete">
+      <created>1438714493329</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1438714493329</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
