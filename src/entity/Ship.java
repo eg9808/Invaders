@@ -22,7 +22,7 @@ public class Ship extends Entity {
 	private static final int BULLET_SPEED = -6;
 	/** Movement of the ship for each unit of time. */
 	private static final int SPEED = 2;
-	
+
 	/** Minimum time between shots. */
 	private Cooldown shootingCooldown;
 	/** Time spent inactive between hits. */
@@ -30,7 +30,7 @@ public class Ship extends Entity {
 
 	/**
 	 * Constructor, establishes the ship's properties.
-	 * 
+	 *
 	 * @param positionX
 	 *            Initial position of the ship in the X axis.
 	 * @param positionY
@@ -55,12 +55,11 @@ public class Ship extends Entity {
 
 		// Detects whether the ship is not touching the left border
 		boolean isShipNotTouchingLeftBorder = !(this.getPositionX() - this.getSpeed() < 1);
-
-		if (Main.getInputManager().isRightKeyDown() && isShipNotTouchingRightBorder) {
-			this.moveRight();
+		if(Main.getInputManager().isRightKeyDown() && isShipNotTouchingRightBorder)
+		{ this.moveRight();
 		}
-		else if (Main.getInputManager().isLeftKeyDown() && isShipNotTouchingLeftBorder) {
-			this.moveLeft();
+		if (Main.getInputManager().isLeftKeyDown() && isShipNotTouchingLeftBorder)
+		{this.moveLeft();
 		}
 	}
 
@@ -68,7 +67,8 @@ public class Ship extends Entity {
 	 * Moves the ship speed uni ts right, or until the right screen border is
 	 * reached.
 	 */
-	public final void moveRight() { this.positionX += SPEED; }
+	public final void moveRight() { this.positionX += SPEED;
+	}
 
 	/**
 	 * Moves the ship speed units left, or until the left screen border is
